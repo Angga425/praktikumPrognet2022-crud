@@ -1,0 +1,142 @@
+#collection_card .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    /* backdrop-filter: blur(5px); */
+    transform-style: preserve-3d;
+}
+
+#collection_card .box::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #232323;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#collection_card .box::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 4em;
+    font-weight: 900;
+    color: #232323;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#collection_card .box:hover::before,
+#collection_card .box:hover::after {
+    opacity: 0.5;
+}
+
+#collection_card .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #232323;
+    font-style: bold;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+#collection_card .box:hover .name {
+    top: 40px;
+    opacity: 1;
+}
+
+#collection_card .box .buy {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #333;
+    background: #ffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+#collection_card .box:hover .buy {
+    bottom: 20px;
+    opacity: 1;
+}
+
+
+#collection_card .box .price {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+#collection_card .box .price2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 65px);
+    color: #FF0000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: line-through;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+#collection_card .box:hover .price2 {
+    bottom: 55px;
+    opacity: 1;
+}
+
+#collection_card .box:hover .price {
+    bottom: 70px;
+    opacity: 1;
+}
+
+#collection_card .box .shoes {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    max-width: 250px;
+    transition: 0.5s;
+    z-index: 10;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 0px);
+}
+
+#collection_card .box:hover .shoes {
+    transform: translate3d(-50%, -50%, 100px);
+}
